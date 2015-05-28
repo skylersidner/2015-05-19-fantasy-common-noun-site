@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150528191952) do
+ActiveRecord::Schema.define(:version => 20150528203416) do
+
+  create_table "beings", :force => true do |t|
+    t.text    "name"
+    t.text    "universe"
+    t.text    "collection_id"
+    t.integer "user_id"
+  end
+
+  create_table "collections", :force => true do |t|
+    t.text "noun"
+  end
 
   create_table "users", :force => true do |t|
     t.text "username"
